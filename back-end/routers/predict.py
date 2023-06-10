@@ -6,6 +6,10 @@ import numpy as np
 import tensorflow as tf
 import re
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 router = APIRouter()
 
 crop_disease = {
@@ -42,6 +46,9 @@ from langchain.utilities.wolfram_alpha import WolframAlphaAPIWrapper
 from langchain.memory import ConversationBufferMemory
 from langchain.chat_models import ChatOpenAI
 #
+os.environ['OPENAI_API_KEY'] = os.environ.get('OPENAI_API_KEY')
+os.environ['WOLFRAM_ALPHA_APPID'] = os.environ.get('WOLFRAM_ALPHA_APPID')
+
 llm = ChatOpenAI(temperature=0)
 #define tools for the agent
 tools = load_tools(['wikipedia','wolfram-alpha'],llm=llm)

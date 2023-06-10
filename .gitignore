@@ -1,3 +1,5 @@
 node_modules
 backend/Lib
 back-end/Lib
+back-end/config.py
+back-end/.env
