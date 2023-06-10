@@ -22,7 +22,7 @@ class HomePage extends React.Component {
 		}
 
 		return (
-			<div css={wrapperStyle()}>
+			<div css={wrapperStyle()} className="">
 				{authRedirect}
 				<div css={UIComponentStyle()}>
 					<div css={boxStyle()}>

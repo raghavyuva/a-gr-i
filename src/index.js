@@ -16,6 +16,8 @@ import reducer from './store/reducer';
 
 // import './index.scss';
 
+import './index.css'
+
 const store = createStore(reducer, compose(
   applyMiddleware(thunk)
 ));

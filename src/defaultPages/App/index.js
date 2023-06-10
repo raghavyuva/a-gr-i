@@ -23,10 +23,10 @@ import {
     CometChatGroupListWithMessages,
     CometChatMessages
 } from '../../cometchat-chat-uikit-react-master/CometChatWorkspace/src';
-
 import {
     wrapperStyle
 } from "./style";
+import LandingPage from './LandingPage';
 
 const history = createBrowserHistory();
 
@@ -42,7 +42,7 @@ class App extends React.Component {
     render() {
 
         return (
-            <div css={wrapperStyle()}>
+            <div  className=' bg-gradient-to-r from-green-400 via-green-200 to-green-200'>
                 <Router history={history}>
                     <Switch>
                         <PrivateRoute path="/embedded-app" component={CometChatUI} />
@@ -55,6 +55,7 @@ class App extends React.Component {
                         <PrivateRoute path="/messages" component={CometChatMessages} chatWithGroup="supergroup" />
                         <PrivateRoute exact path="/" component={HomePage} />
                         <Route path="/login" component={KitchenSinkApp} />
+                        <Route path="/explore" component={LandingPage} />
                     </Switch>
                 </Router>
             </div>
