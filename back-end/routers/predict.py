@@ -49,13 +49,12 @@ from langchain.chat_models import ChatOpenAI
 os.environ['OPENAI_API_KEY'] = os.environ.get('OPENAI_API_KEY')
 os.environ['WOLFRAM_ALPHA_APPID'] = os.environ.get('WOLFRAM_ALPHA_APPID')
 
-llm = ChatOpenAI(temperature=0) 
+llm = ChatOpenAI(temperature=0)
 #define tools for the agent
 tools = load_tools(['wikipedia','wolfram-alpha'],llm=llm)
 #Setting a memory for conversation
 memory = ConversationBufferMemory(memory_key="chat_history",return_messages=True)
 #Define Agent
-
 agent = initialize_agent(tools,llm,agent=AgentType.CONVERSATIONAL_REACT_DESCRIPTION,
                          verbose=True,
                          memory=memory,
@@ -97,7 +96,7 @@ def getDetailsOfDisease(pred_result: str):
     about = f"Please tell me about {pred_result} crop"
     try:
         info = agent.run(input=about)
-        return {"prediction result info" : info}
+        return {"question_number" : q_num}
     except Exception as e:
         info =str(e)
         if info.startswith("Could not parse LLM output: `"):
@@ -106,35 +105,3 @@ def getDetailsOfDisease(pred_result: str):
             raise Exception(str(e))
    
     
-@router.get('/predict/cause/{pred_result}')
-def getCause(pred_result:str):
-    caused = f"How is {pred_result} crop diseased caused?"
-    try:
-        cause = agent.run(input=caused)
-        return {
-            "cause" : cause,
-            "success" : True
-        }
-    except Exception as e:
-        cause =str(e)
-        if cause.startswith("Could not parse LLM output: `"):
-            cause = info.removeprefix("Could not parse LLM output: `").removesuffix("`")
-        else:
-            raise Exception(str(e))
-
-@router.get('/predict/cure/{pred_result}')
-def getCure(pred_result:str):
-    cure = f"What is cure for {pred_result} crop diseased?"
-    try:
-        precaution = agent.run(input=cure)
-        return {
-            "precaution" : precaution,
-            "success" : True
-        }
-    except Exception as e:
-        precaution =str(e)
-        if precaution.startswith("Could not parse LLM output: `"):
-            precaution = info.removeprefix("Could not parse LLM output: `").removesuffix("`")
-        else:
-            raise Exception(str(e))
- 

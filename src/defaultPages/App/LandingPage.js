@@ -7,20 +7,18 @@ import Pricing from './Pricing'
 import Team from './Team'
 import FAQ from './FAQ'
 import Footer from './Footer'
-import Farmdoctor from './farmdoctor'
 
 const LandingPage = () => {
     return (
         <div className='mx-auto max-w-6xl bg-gradient-to-r from-green-400 via-green-200 to-green-200 shadow-2xl'>
-            {/* <NavBar />
+            <NavBar />
             <Hero />
             <Features />
             <Trusted />
             <Pricing />
             <Team/>
             <FAQ />
-            <Footer /> */}
-            <Farmdoctor />
+            <Footer />
         </div>
     )
 }

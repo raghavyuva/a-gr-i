@@ -1,10 +1,6 @@
 import logging
 import sys
 import os
-
-from dotenv import load_dotenv
-load_dotenv()
-
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
@@ -17,8 +13,8 @@ from langchain.agents import initialize_agent
 
 from llama_index import VectorStoreIndex, SimpleDirectoryReader
 
-os.environ["OPENAI_API_KEY"]= os.environ.get('OPENAI_API_KEY')
-openai.api_key= os.environ.get('OPENAI_API_KEY')
+os.environ["OPENAI_API_KEY"]=''
+openai.api_key=''
 
 documents = SimpleDirectoryReader('data').load_data()
 index = VectorStoreIndex.from_documents(documents=documents)
