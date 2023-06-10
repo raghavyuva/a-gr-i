@@ -3,8 +3,8 @@ import numpy as np
 import os
 import re
 
-os.environ['OPENAI_API_KEY'] = "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"
-os.environ["WOLFRAM_ALPHA_APPID"] = "L3GTXP-A6G97YGLX9"
+os.environ['OPENAI_API_KEY'] = ""
+os.environ["WOLFRAM_ALPHA_APPID"] = ""
 
 
 crop_disease = {
