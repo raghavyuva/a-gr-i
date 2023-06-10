@@ -8,7 +8,7 @@ from stability_sdk import client
 import stability_sdk.interfaces.gooseai.generation.generation_pb2 as generation
 
 os.environ['STABILITY_HOST'] = 'grpc.stability.ai:443'
-os.environ['STABILITY_KEY'] = 'sk-n8lrLMq3oZ17dktLEmdhMGK14Imo53slAMFd0338xbz2gIdF'
+os.environ['STABILITY_KEY'] = ''
 
 html_temp = """
 <div style="display:flex; justify-content:center;">
