@@ -27,6 +27,8 @@ import {
     wrapperStyle
 } from "./style";
 import LandingPage from './LandingPage';
+import FarmDoc from './FarmDoc';
+import Chatbot from './Chatbot';
 
 const history = createBrowserHistory();
 
@@ -42,7 +44,7 @@ class App extends React.Component {
     render() {
 
         return (
-            <div  className=' bg-gradient-to-r from-green-400 via-green-200 to-green-200'>
+            <div css={wrapperStyle()} className=' bg-gradient-to-r from-green-400 via-green-200 to-green-200'>
                 <Router history={history}>
                     <Switch>
                         <PrivateRoute path="/embedded-app" component={CometChatUI} />
@@ -54,8 +56,10 @@ class App extends React.Component {
                         <PrivateRoute path="/user-list" component={CometChatUserList} />
                         <PrivateRoute path="/messages" component={CometChatMessages} chatWithGroup="supergroup" />
                         <PrivateRoute exact path="/" component={HomePage} />
+                        <Route path="/disease" component={FarmDoc}/>
                         <Route path="/login" component={KitchenSinkApp} />
                         <Route path="/explore" component={LandingPage} />
+                        <Route path="/chat" component={Chatbot} />
                     </Switch>
                 </Router>
             </div>
