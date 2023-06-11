@@ -1,6 +1,6 @@
 from fastapi import FastAPI, File, UploadFile
 from pydantic import BaseModel
-from routers import predict
+from routers import predict, chat
 
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -20,6 +20,7 @@ app.add_middleware(
 )
 
 app.include_router(predict.router)
+app.include_router(chat.router)
 
 @app.get('/')
 def server():

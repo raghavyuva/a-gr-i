@@ -20,7 +20,7 @@ from llama_index import VectorStoreIndex, SimpleDirectoryReader
 os.environ["OPENAI_API_KEY"]= os.environ.get('OPENAI_API_KEY')
 openai.api_key= os.environ.get('OPENAI_API_KEY')
 
-documents = SimpleDirectoryReader('data').load_data()
+documents = SimpleDirectoryReader('../farmDoctor/data').load_data()
 index = VectorStoreIndex.from_documents(documents=documents)
 
 tools = [
@@ -40,9 +40,27 @@ agent_executor = initialize_agent(tools, llm, agent="conversational-react-descri
 info = agent_executor.run(input="What are the common challenges faced by farmers")
 print(info)
 
-@router.get('/chat')
-def generatePrompt(chat : str):
+@router.get('/chatss')
+async def generatePrompt(chat: str):
+    print(chat)
     info = agent_executor.run(input=chat)
     return {
+        "chat" : chat,
         "info" : info
     }
+
+
+@router.get('/chats')
+async def generateAnswer(chat:str):
+    try:
+        info = agent_executor.run(input=chat)
+        return {
+            "chat" : chat,
+            "info" : info
+        }
+    except Exception as e:
+        info =str(e)
+        if info.startswith("Could not parse LLM output: `"):
+            info = info.removeprefix("Could not parse LLM output: `").removesuffix("`")
+        else:
+            raise Exception(str(e))
