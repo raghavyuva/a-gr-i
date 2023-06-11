@@ -8,7 +8,7 @@ Team Name: Ciphers
 
 ### Demo Video 🎥
 
- <p align="center"><a href="https://github.com/raghavyuva/ciphers_quantumx/blob/master/src/assets/WhatsApp%20Video%202022-12-10%20at%208.29.51%20AM.mp4"><img src="https://github.com/raghavyuva/ciphers_statement/blob/master/src/assets/index.jpg"></a></p>
+ <p align="center"><a href=""><img src="https://github.com/raghavyuva/ciphers_statement/blob/master/src/assets/index.jpg"></a></p>
  A-gr-I is an AI enabled application that solves issues faced by farmers by using latest trending technologies
 <br/>
 <br/>
