@@ -1,10 +1,9 @@
 import pandas as pd
 import pickle
 import warnings
-import os
-from llama_index import download_loader
 
-os.environ['OPENAI_API_KEY'] = 'API_KEY'
+import getData
+
 warnings.filterwarnings('ignore')
 
 # Load the data
@@ -29,12 +28,8 @@ with open('naivebayes.pkl', 'rb') as file:
 
 predictions = model.predict(data)
 
-# create a wikipedia download loader object
-WikipediaReader = download_loader("WikipediaReader")
-
-# load the wikipedia reader object
-loader = WikipediaReader()
-documents = loader.load_data(pages=[predictions[0]])
-
 about = f"Please describe {predictions[0]} fertilizer type"
 how_to_use = f"Please describe how to use {predictions[0]} fertilizer"
+
+response = getData.generateResponse(predictions[0],how_to_use)
+print(response)
