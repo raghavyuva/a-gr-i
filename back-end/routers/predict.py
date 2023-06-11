@@ -121,7 +121,7 @@ def getCause(pred_result:str):
     except Exception as e:
         cause =str(e)
         if cause.startswith("Could not parse LLM output: `"):
-            cause = info.removeprefix("Could not parse LLM output: `").removesuffix("`")
+            cause = caused.removeprefix("Could not parse LLM output: `").removesuffix("`")
         else:
             raise Exception(str(e))
         
@@ -137,6 +137,6 @@ def getCure(pred_result: str):
     except Exception as e:
         precaution =str(e)
         if precaution.startswith("Could not parse LLM output: `"):
-            precaution = info.removeprefix("Could not parse LLM output: `").removesuffix("`")
+            precaution = precaution.removeprefix("Could not parse LLM output: `").removesuffix("`")
         else:
             raise Exception(str(e)) 

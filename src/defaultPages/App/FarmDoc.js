@@ -53,7 +53,7 @@ const FarmDoc = () => {
   }
   return (
     <div className="w-screen h-screen bg-slate-100 flex justify-center items-center">
-      <div className="bg-white p-5 rounded-sm sapce-y-5">
+      <div className="bg-white p-5 rounded-sm sapce-y-5 max-w-xl">
         <div>
           <p className="font-mono my-2">
             Upload the image to find out the disease
