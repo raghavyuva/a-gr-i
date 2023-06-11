@@ -28,11 +28,7 @@ const Features = () => {
                         <u class="text-[hsl(210,12%,80%)]">now</u>
                       </h3>
                       <p class="text-[hsl(210,12%,80%)]">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Harum quia laboriosam error consequuntur fugit,
-                        doloribus rerum, iure nesciunt amet quidem veniam
-                        cupiditate hic fugiat dolore aperiam quisquam libero
-                        earum quibusdam?
+                      Embrace the agricultural revolution with our cutting-edge technology and AI-driven solutions. We are dedicated to transforming the way agriculture is practiced by harnessing the power of innovation. Our platform combines the latest advancements in technology, such as AI, data analytics, and precision farming, to empower farmers with actionable insights and tools that revolutionize their farming practices.
                       </p>
                     </div>
                   </div>
@@ -65,11 +61,9 @@ const Features = () => {
                 </div>
               </div>
               <div class="ml-4 grow">
-                <p class="mb-1 font-bold">Support 24/7</p>
+                <p class="mb-1 font-bold">Farm doctor </p>
                 <p class="text-black">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Nihil quisquam quibusdam modi sapiente magni molestias
-                  pariatur facilis reprehenderit facere aliquam ex.
+                Farm Doctor helps farmers diagnose and manage crop diseases, pest infestations, nutrient deficiencies, and other farming challenges. It offers a user-friendly interface where farmers can upload images or descriptions of their crop issues and receive accurate and timely guidance.
                 </p>
               </div>
             </div>
@@ -94,11 +88,9 @@ const Features = () => {
                 </div>
               </div>
               <div class="ml-4 grow">
-                <p class="mb-1 font-bold">Safe and solid</p>
+                <p class="mb-1 font-bold">Crop agent</p>
                 <p class="text-black">
-                  Eum nostrum fugit numquam, voluptates veniam neque quibusdam
-                  ullam aspernatur odio soluta, quisquam dolore animi mollitia a
-                  omnis praesentium, expedita nobis!
+                Crop Agent provides personalized recommendations and real-time insights to help farmers make informed decisions. It offers guidance on various aspects of crop management, including optimal planting times, crop selection, nutrient management, irrigation scheduling, and pest control strategies.
                 </p>
               </div>
             </div>
@@ -123,11 +115,9 @@ const Features = () => {
                 </div>
               </div>
               <div class="ml-4 grow">
-                <p class="mb-1 font-bold">Extremely fast</p>
+                <p class="mb-1 font-bold">Community engagement–text2img</p>
                 <p class="text-black">
-                  Enim cupiditate, minus nulla dolor cumque iure eveniet facere
-                  ullam beatae hic voluptatibus dolores exercitationem? Facilis
-                  debitis aspernatur amet nisi iure eveniet facere?
+                Whether you prefer to communicate in Hindi or Kannada, our platform allows you to effortlessly convert your text into visually appealing images in English. Simply enter your text in your preferred language, and our advanced AI technology will instantly transform it into stunning images that can be easily shared and understood by a wider audience.
                 </p>
               </div>
             </div>
@@ -157,11 +147,11 @@ const Features = () => {
                 </div>
               </div>
               <div class="ml-4 grow">
-                <p class="mb-1 font-bold">Live analytics</p>
+                <p class="mb-1 font-bold">Fertilizer recommender</p>
                 <p class="text-black">
-                  Illum doloremque ea, blanditiis sed dolor laborum praesentium
-                  maxime sint, consectetur atque ipsum ab adipisci ullam
-                  aspernatur odio soluta, quisquam dolore
+                We are using 7 types of fertilizer recommender  
+farmers can enhance nutrient efficiency, maximize crop yield, and minimize environmental impact. 
+
                 </p>
               </div>
             </div>

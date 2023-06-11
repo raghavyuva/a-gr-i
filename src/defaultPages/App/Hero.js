@@ -12,10 +12,7 @@ const Hero = () => {
                                 The best product <br /><span class="text-black">for a farmer</span>
                             </h1>
                             <p class="opacity-70 text-black">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                Temporibus, expedita iusto veniam atque, magni tempora
-                                mollitia dolorum consequatur nulla, neque debitis eos
-                                reprehenderit quasi ab ipsum nisi dolorem modi. Quos?
+                            Welcome to our Agritech Platform, where innovation meets agriculture for a sustainable future. Discover cutting-edge technologies and data-driven solutions designed to empower farmers, optimize yields, and ensure environmental stewardship.
                             </p>
                         </div>
                     <img src="https://th-i.thgim.com/public/sci-tech/agriculture/87sx5z/article30131510.ece/alternates/LANDSCAPE_1200/NEWS2FARMER" className='w-full' alt='image' />
