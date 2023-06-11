@@ -87,16 +87,20 @@ async def getPrediction(image: UploadFile = File(...)):
     # Perform prediction using the loaded model
     os.remove("temp_image.jpg")
     return {
-     "prediction" : prediction_result
+        "success" : True,
+     "prediction" : prediction_result,
+     "message" : "Predicted successfully"
     }
 
-@router.get('/predict/{pred_result}')
-def getDetailsOfDisease(pred_result: str):
-    
+@router.get('/predict/details/{pred_result}')
+def getDetailsOfDisease(pred_result: str) :
     about = f"Please tell me about {pred_result} crop"
     try:
         info = agent.run(input=about)
-        return {"question_number" : q_num}
+        return {
+            "success" : True,
+            "Details" : info
+        }
     except Exception as e:
         info =str(e)
         if info.startswith("Could not parse LLM output: `"):
@@ -105,3 +109,34 @@ def getDetailsOfDisease(pred_result: str):
             raise Exception(str(e))
    
     
+@router.get('/predict/cause/{pred_result}')
+def getCause(pred_result:str):
+    caused = f"How is {pred_result} crop diseased caused?"
+    try:
+        cause = agent.run(input=caused)
+        return {
+            "success" : True,
+            "cause" : cause
+        }
+    except Exception as e:
+        cause =str(e)
+        if cause.startswith("Could not parse LLM output: `"):
+            cause = info.removeprefix("Could not parse LLM output: `").removesuffix("`")
+        else:
+            raise Exception(str(e))
+        
+@router.get('/predict/cure/{pred_result}')
+def getCure(pred_result: str):
+    cure = f"What is cure for {pred_result} crop diseased?"
+    try:
+        precaution = agent.run(input=cure)
+        return {
+            'success' : True,
+            'cure' : precaution
+        }
+    except Exception as e:
+        precaution =str(e)
+        if precaution.startswith("Could not parse LLM output: `"):
+            precaution = info.removeprefix("Could not parse LLM output: `").removesuffix("`")
+        else:
+            raise Exception(str(e)) 
