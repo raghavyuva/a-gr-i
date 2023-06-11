@@ -26,7 +26,7 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="flex justify-center items-center w-screen overflow-x-hidden">
+    <div className="flex justify-center items-center w-screen overflow-x-hidden h-screen ">
       <div class="container flex justify-center items-center">
         <div class="w-[50%] border rounded">
           <h1 className="font-mono text-3xl font-bold text-center">
@@ -35,18 +35,29 @@ const Chatbot = () => {
 
           <div>
             <div class="w-full">
-              <div>
-                <button>Challenges faced by the Indian farmer</button>
-                <button>How to grow rice properly</button>
+              <div className="gap-4 flex ml-4">
+                <button
+                  type="button"
+                  class="inline-block rounded bg-green-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal  shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-500-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-green-500-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-500-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                >
+                  Challenges faced by the Indian farmer
+                </button>
+                <button
+                  type="button"
+                  class="inline-block rounded bg-green-500 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal  shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-green-500-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-green-500-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-green-500-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+                >
+                  {" "}
+                  How to grow rice properly
+                </button>
               </div>
-              <div class="relative w-full p-6 overflow-y-auto h-[40rem]">
+              <div class="relative w-full p-2 overflow-y-auto h-96">
                 <ul class="w-full bg-slate-200 space-y-5">
                   {answers?.length < 0 ? (
                     <>No chats available</>
                   ) : (
                     answers.map((ele, index) => (
                       <li class={`flex w-full`}>
-                        <div class="relative w-full px-4 py-2 space-y-5 text-gray-700 rounded shadow">
+                        <div class="relative w-full px-2 py-2 space-y-5 text-gray-700 rounded shadow">
                           <p className="bg-slate-100 px-2  py-2 rounded-md">
                             {ele.chat}
                           </p>
@@ -60,7 +71,7 @@ const Chatbot = () => {
                 </ul>
               </div>
 
-              <div class="flex items-center justify-between w-full p-3 border-t border-gray-300">
+              <div class="flex items-center justify-between w-full border-t border-gray-300">
                 <button>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +107,7 @@ const Chatbot = () => {
                 <input
                   type="text"
                   placeholder="Message"
-                  class="block w-full py-2 pl-4 mx-3 bg-gray-100 rounded-full outline-none focus:text-gray-700"
+                  class="block w-full py-1 pl-4 mx-3 bg-gray-100 rounded-full outline-none focus:text-gray-700"
                   name="message"
                   value={chat}
                   onChange={(e) => setChat(e.target.value)}
