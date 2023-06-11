@@ -11,7 +11,7 @@ const Features = () => {
         <div class="flex flex-wrap items-center">
           <div class="mb-12 w-full shrink-0 grow-0 basis-auto md:px-6 lg:mb-0 lg:w-5/12">
             <div
-              class="relative overflow-hidden rounded-lg bg-cover bg-[50%] bg-no-repeat shadow-lg dark:shadow-black/20"
+              class="relative overflow-hidden rounded-lg bg-cover"
               data-te-ripple-init
               data-te-ripple-color="light"
             >
@@ -20,12 +20,12 @@ const Features = () => {
                 class="w-full"
               />
               <a href="#!">
-                <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsl(0,0%,0%,0.4)] bg-fixed">
+                <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed">
                   <div class="flex h-full items-center justify-center">
                     <div class="px-6 py-12 text-center text-black md:px-12">
                       <h3 class="mb-6 text-2xl font-bold uppercase">
                         The future is
-                        <u class="text-[hsl(210,12%,80%)]">now</u>
+                        <u class="">now</u>
                       </h3>
                       <p class="text-[hsl(210,12%,80%)]">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -47,7 +47,7 @@ const Features = () => {
           <div class="w-full shrink-0 grow-0 basis-auto md:px-6 lg:w-7/12">
             <div class="mb-12 flex">
               <div class="shrink-0">
-                <div class="rounded-md bg-[hsl(204,30%,20%)] p-4 shadow-lg dark:bg-[hsl(204,23%,30%)]">
+                <div class="rounded-md ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -76,7 +76,7 @@ const Features = () => {
 
             <div class="mb-12 flex">
               <div class="shrink-0">
-                <div class="rounded-md bg-[hsl(204,30%,20%)] p-4 shadow-lg dark:bg-[hsl(204,23%,30%)]">
+                <div class="rounded-md ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -105,7 +105,7 @@ const Features = () => {
 
             <div class="mb-12 flex">
               <div class="shrink-0">
-                <div class="rounded-md bg-[hsl(204,30%,20%)] p-4 shadow-lg dark:bg-[hsl(204,23%,30%)]">
+                <div class="rounded-md ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -134,7 +134,7 @@ const Features = () => {
 
             <div class="flex">
               <div class="shrink-0">
-                <div class="rounded-md bg-[hsl(204,30%,20%)] p-4 shadow-lg dark:bg-[hsl(204,23%,30%)]">
+                <div class="rounded-md ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"

@@ -7,6 +7,7 @@ import Pricing from './Pricing'
 import Team from './Team'
 import FAQ from './FAQ'
 import Footer from './Footer'
+import Connect from './Connect'
 
 const LandingPage = () => {
     return (
@@ -14,6 +15,7 @@ const LandingPage = () => {
             <NavBar />
             <Hero />
             <Features />
+            <Connect />
             <Trusted />
             <Pricing />
             <Team/>
