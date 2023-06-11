@@ -27,6 +27,7 @@ import {
     wrapperStyle
 } from "./style";
 import LandingPage from './LandingPage';
+import FarmDoc from './FarmDoc';
 
 const history = createBrowserHistory();
 
@@ -54,6 +55,7 @@ class App extends React.Component {
                         <PrivateRoute path="/user-list" component={CometChatUserList} />
                         <PrivateRoute path="/messages" component={CometChatMessages} chatWithGroup="supergroup" />
                         <PrivateRoute exact path="/" component={HomePage} />
+                        <Route path="/disease" component={FarmDoc}/>
                         <Route path="/login" component={KitchenSinkApp} />
                         <Route path="/explore" component={LandingPage} />
                     </Switch>
