@@ -8,7 +8,7 @@ Team Name: Ciphers
 
 ### Demo Video 🎥
 
- <p align="center"><a href=""><img src=""></a></p>
+ <p align="center"><a href="https://drive.google.com/file/d/1R59Dll3ERIGjpTjblfulWEpezZc6a6MF/view"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/India_Farming.jpg"></a></p>
  A-gr-I is an AI enabled application that solves issues faced by farmers by using latest trending technologies
 <br/>
 <br/>
@@ -51,7 +51,6 @@ npm run start
 # Presentation
 
 ### Click the Image to view our presentation
+<a href="https://www.canva.com/design/DAFlZ-gz2KQ/H0yeaLQs3KslAhQmVQRXsw/edit?utm_content=DAFlZ-gz2KQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"><img src="https://slidebazaar.com/wp-content/uploads/2022/11/smart-farming-powerpoint-template.jpg"></a>
 
-<a href=""><img src=""></a>
-
-### [Download Presentation PDF]()
+### [Download Presentation PDF](https://www.canva.com/design/DAFlZ-gz2KQ/H0yeaLQs3KslAhQmVQRXsw/edit?utm_content=DAFlZ-gz2KQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
